@@ -1,0 +1,112 @@
+
+/* Basic reset for the body */
+body {
+   font-family: 'Arial', sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+   background-color: #f4f4f9;
+}
+
+/* Calculator container */
+.calculator {
+   background-color: #fff;
+   border-radius: 15px;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   padding: 30px;
+   width: 360px;
+   text-align: center;
+}
+
+/* Display field */
+#display {
+   width: 100%;
+   padding: 20px;
+   font-size: 2.5em;
+   border: 2px solid #ddd;
+   border-radius: 10px;
+   margin-bottom: 20px;
+   text-align: right;
+   background-color: #fafafa;
+   color: #333;
+   box-sizing: border-box;
+}
+
+/* Button layout */
+.buttons {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 15px;
+}
+
+/* Button styling */
+button {
+   background-color: #f9f9f9;
+   border: 1px solid #ccc;
+   padding: 20px;
+   font-size: 1.8em;
+   border-radius: 12px;
+   cursor: pointer;
+   transition: all 0.2s ease;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover and active effects */
+button:hover {
+   background-color: #f0f0f0;
+   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+   background-color: #e0e0e0;
+   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+   transform: translateY(2px);
+}
+
+/* Special styling for operators */
+.operator {
+   background-color: #ffbb33;
+   color: #fff;
+}
+
+.operator:hover {
+   background-color: #ff9900;
+}
+
+/* Clear and equals button */
+.equals {
+   background-color: #4CAF50;
+   color: white;
+}
+
+.equals:hover {
+   background-color: #45a049;
+}
+
+.clear {
+   background-color: #f44336;
+   color: white;
+}
+
+.clear:hover {
+   background-color: #e53935;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+   .calculator {
+       width: 90%;
+       padding: 20px;
+   }
+
+   button {
+       padding: 15px;
+       font-size: 1.5em;
+   }
+
+   #display {
+       font-size: 2em;
+   }
+}
