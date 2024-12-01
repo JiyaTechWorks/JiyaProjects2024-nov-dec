@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Digital Clock</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+      }
+
+      .clock-container {
+         background-color: #181b29;
+         height: 300px;
+         width: 1200px;
+         display: flex;
+         align-items: end;
+         justify-content: space-evenly;
+         position: relative;
+         border-radius: 8px;
+         box-shadow: 0 0 15px #21232e;
+      }
+
+      .time-box {
+         width: 24%;
+         height: 100%;
+         /* border: 2px solid red; */
+         padding: .5rem;
+      }
+
+      .title{
+         color: white;
+         text-transform: capitalize;
+         text-align: center;
+         font-size: 1.8rem;
+      }
+   </style>
 </head>
+
 <body>
-   
+   <div class="clock-container">
+      <div class="hr-box time-box">
+         <div class="title">
+            <p>Hours</p>
+         </div>
+      </div>
+      <div class="min-box time-box">
+         <div class="title">
+            <p>minutes</p>
+         </div>
+      </div>
+      <div class="sec-box time-box">
+         <div class="title">
+            <p>second</p>
+         </div>
+      </div>
+      <div class="msec-box time-box">
+         <div class="title">
+            <p>milisecond</p>
+         </div>
+      </div>
+   </div>
+
 </body>
+
 </html>
