@@ -24,7 +24,7 @@
          height: 300px;
          width: 1200px;
          display: flex;
-         align-items: end;
+         /* align-items: end; */
          justify-content: space-evenly;
          position: relative;
          border-radius: 8px;
@@ -34,15 +34,32 @@
       .time-box {
          width: 24%;
          height: 100%;
-         /* border: 2px solid red; */
          padding: .5rem;
-      }
-
-      .title{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
          color: white;
          text-transform: capitalize;
          text-align: center;
          font-size: 1.8rem;
+      }
+
+      p{
+         margin: .2rem;
+      }
+
+      input[type="text"] {
+         width: 200px;
+         height: 200px;
+         text-align: center;
+         pointer-events: none;
+         font-size: 2rem;
+         border-radius: 1rem;
+      }
+
+      ::placeholder {
+         text-align: center;
       }
    </style>
 </head>
@@ -50,27 +67,23 @@
 <body>
    <div class="clock-container">
       <div class="hr-box time-box">
-         <div class="title">
-            <p>Hours</p>
-         </div>
+         <p>Hours</p>
+         <input type="text" id="hours" placeholder="0">
       </div>
       <div class="min-box time-box">
-         <div class="title">
-            <p>minutes</p>
-         </div>
+         <p>minutes</p>
+         <input type="text" id="minutes" placeholder="0">
       </div>
       <div class="sec-box time-box">
-         <div class="title">
-            <p>second</p>
-         </div>
+         <p>seconds</p>
+         <input type="text" id="seconds" placeholder="0">
       </div>
       <div class="msec-box time-box">
-         <div class="title">
-            <p>milisecond</p>
-         </div>
+         <p>milliseconds</p>
+         <input type="text" id="milliseconds" placeholder="0">
       </div>
    </div>
 
 </body>
-
+<script src="script.js"></script>
 </html>
