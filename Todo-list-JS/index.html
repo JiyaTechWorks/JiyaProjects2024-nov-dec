@@ -1,11 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Todo list</title>
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+         caret-color: transparent;
+      }
+
+      body {
+         display: flex;
+         background: #181b27;
+         justify-content: center;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .wrapper {
+         background-color: #181b22;
+         border-radius: 1rem;
+         box-shadow: 2px 3px 6px #c5c5c5b9, inset 1px 2px 6px #b6b6b6;
+         padding: 1rem;
+         color: #fff;
+         margin: 1rem;
+      }
+
+      .head {
+         text-align: center;
+         padding: 2rem;
+         width: 400px;
+         font-size: 2rem;
+         text-shadow: 2px 2px 5px rgb(212, 21, 85);
+      }
+
+      .text-input {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+      }
+
+      .text-input button {
+         height: 40px;
+         width: 40px;
+         font-size: 2rem;
+         border-radius: .2rem;
+         border: none;
+         outline: none;
+         background-color: rgb(216, 17, 83);
+         box-shadow: 0px 0px 6px rgb(202, 127, 152);
+         color: #c2c1c1;
+         
+         cursor: pointer;
+         transition: all 0.2s ease;
+      }
+
+      .text-input button:hover {
+         background-color: rgb(196, 2, 66);
+      }
+
+      .text-input button:active {
+         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+         transform: translateY(1.2px);
+      }
+
+      #task {
+         width: 80%;
+         border: none;
+         height: 40px;
+         border-radius: .2rem;
+         outline: none;
+         padding: .8rem;
+         font-size: 1.1rem;
+      }
+
+       ::placeholder {
+         font-style: italic;
+      }
+
+      .list{
+         padding: 1rem;
+      }
+
+      .list>ul{
+         list-style: none;
+         padding: 0;
+      }
+
+      .list>ul>li{
+         position: relative;
+         margin: 10px 0;
+         padding-left: 30px;
+         display: flex;
+         align-items: center;
+      }
+
+      .list li::before{
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 20px;
+         height: 20px;
+         border: 2px solid #333;
+         border-radius: 4px;
+      }
+
+      .list li.checked::before{
+         content: '*';
+         font-size: 1rem;
+         color: palevioletred;
+         text-align: center;
+         line-height: 20px;
+      }
+
+
+      .list>ul>li>p{
+         display: inline-block;
+         font-size: larger;
+         flex: 1;
+         height: 30px;
+         padding: .2rem;
+      }
+
+      .list button{
+         width: 30px;
+         height: 30px;
+         border: none;
+         border-radius: .2rem;
+         font-size: 1rem;
+         background-color: rgb(216, 17, 83);
+         color: #fff;
+      }
+   </style>
 </head>
+
 <body>
-   
+   <div class="wrapper">
+      <div class="head">
+         <h1>Todo List</h1>
+      </div>
+      <div class="text-input">
+         <input type="text" id="task" placeholder="Enter task..."><span><button>+</button></span>
+      </div>
+      <div class="list">
+         <ul>
+            <li onclick="checkBox(this)">
+               <p>item-1</p><span><button>X</button></span>
+            </li>
+            <li onclick="checkBox(this)">
+               <p>item-2</p><span><button>X</button></span>
+            </li>
+            <li onclick="checkBox(this)">
+               <p>item-1</p><span><button>X</button></span>
+            </li>
+            <li onclick="checkBox(this)">
+               <p>item-1</p><span><button>X</button></span>
+            </li>
+         </ul>
+      </div>
+   </div>
 </body>
+
+<script src="script.js"></script>
+
 </html>
